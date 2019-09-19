@@ -34,6 +34,7 @@ var commentRoutes    = require("./routes/comments"),
 
 app.use(require("express-session")({
 	secret: "Once again Rusty wins cutest dog!",
+	store:  new dummyStore({configurationOptions}), //new
 	resave: false,
 	saveUninitialized: false
 }));
